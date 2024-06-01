@@ -3,7 +3,7 @@ import db from "../db";
 import { users } from "../schema";
 
 export const getUserByUserId = async (userId: string) => {
-  const user = await db
+  const [user] = await db
     .select()
     .from(users)
     .where(eq(users.id, userId))
