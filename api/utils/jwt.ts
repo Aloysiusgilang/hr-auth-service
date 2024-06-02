@@ -1,7 +1,7 @@
 import JWT from "jsonwebtoken";
 
 const JWT_CONFIG: JWT.SignOptions = {
-  expiresIn: "12h",
+  expiresIn: "30d",
 };
 
 const secret = process.env.JWT_SECRET || "secret";
